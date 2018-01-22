@@ -57,10 +57,10 @@ android studio could not initialize class android.graphics.Typeface
 
 ### Using Screens
 
-|Screen Dimensions         |Width x Height (PX : Pixel) |width x Height (DP : Density Independent Pixel) |Aspect Ratio |Density          |Directory Naming of layout |
-|--------------------------|----------------------------|------------------------------------------------|-------------|-----------------|
-|10 Inch(Landscape Tablet) |2560 x 1600                 |1280 x 800                                      |16 : 10      |x2.0 xhdpi   |layout-sw720, drawable-sw720dp-xhdpi|
-|7 Inch(Tablet)            |1200 x 1920                 |600 x 960                                       |16 : 10      |x2.0 xhdpi   |
-|Full HD(_Based Display_)  |1080 x 1920                 |360 x 640                                       |16 : 9       |x3.0 xxhdpi  |
-|QHD(Quad Full HD)         |1440 x 2960                 |369 x 740                                       |18.5 : 9     |x4.0 xxxhdpi |
+|Screen Dimensions         |Width x Height (PX : Pixel) |width x Height (DP : Density Independent Pixel) |Aspect Ratio |Density          |Directory Naming of layout            |
+|--------------------------|----------------------------|------------------------------------------------|-------------|-----------------|--------------------------------------|
+|10 Inch(Landscape Tablet) |2560 x 1600                 |1280 x 800                                      |16 : 10      |x2.0 xhdpi       |layout-sw720dp, drawable-sw720dp-xhdpi|
+|7 Inch(Tablet)            |1200 x 1920                 |600 x 960                                       |16 : 10      |x2.0 xhdpi       |layout-sw600dp, drawable-sw600dp-xhdpi|
+|Full HD(_Based Display_)  |1080 x 1920                 |360 x 640                                       |16 : 9       |x3.0 xxhdpi      |layout-xxhdpi, drawable-xxhdpi        |
+|QHD(Quad Full HD)         |1440 x 2960                 |369 x 740                                       |18.5 : 9     |x4.0 xxxhdpi     |layout-xxxhdpi, drawable-xxxhdpi      |
 
