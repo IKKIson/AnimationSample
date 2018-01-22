@@ -64,3 +64,5 @@ android studio could not initialize class android.graphics.Typeface
 |Full HD(_Based Display_)  |1080 x 1920                 |360 x 640                                       |16 : 9       |x3.0 xxhdpi      |layout-xxhdpi, drawable-xxhdpi        |
 |QHD(Quad Full HD)         |1440 x 2960                 |369 x 740                                       |18.5 : 9     |x4.0 xxxhdpi     |layout-xxxhdpi, drawable-xxxhdpi      |
 
+- [Smart Device Display and Screens](https://material.io/devices/)
+- [Material Design](https://material.io/)
