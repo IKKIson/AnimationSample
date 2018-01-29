@@ -131,3 +131,85 @@ android studio could not initialize class android.graphics.Typeface
 - (https://developer.android.com/reference/android/util/DisplayMetrics.html)
 - (https://stackoverflow.com/questions/29138689/what-layout-folders-are-required-to-support-all-android-devices)
 - (https://stackoverflow.com/questions/15090752/how-to-include-10-and-7-layouts-properly)
+
+</hr>
+
+## Animation Library
+
+### Lottie - Effect, View, Check, Loading Animation
+
+#### 1. Set this Library
+
+1. build.gradle - Modules
+```markdown
+dependencies {
+       implementation fileTree(dir: 'libs', include: ['*.jar'])
+       implementation 'com.android.support:appcompat-v7:26.1.0'
+       implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+       testImplementation 'junit:junit:4.12'
+       androidTestImplementation 'com.android.support.test:runner:1.0.1'
+       androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+       /* Animation Library */
+       //Lotti - Android
+       //https://github.com/airbnb/lottie-android
+       compile 'com.airbnb.android:lottie:2.5.0-beta3'
+   }
+```
+
+2. Layout
+-  Set : xmlns:app="http://schemas.android.com/apk/res-auto"
+```markdown
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_fileName="md_logo_animation.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+</RelativeLayout>
+```
+
+3. Using
+- 1) Simple (Synchronous)
+```markdown
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_fileName="md_logo_animation.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+```
+- 2) Programmatically (Asynchronous)
+```markdown
+[In Java]
+        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
+        animationView.setAnimation("hello-world.json");
+        animationView.loop(true);
+        animationView.playAnimation();
+```
+
+#### Resource
+1. About Lottie
+- [lottie android in github](https://github.com/airbnb/lottie-android)
+- [airbnb menual](http://airbnb.io/lottie/)
+
+2. .json
+- [lottiefiles](https://www.lottiefiles.com)
+
+3. How to use
+- https://academy.realm.io/kr/posts/lottie-for-android-interactive-animation/
+- https://medium.com/creative-controller/native-app-animations-in-android-studio-using-lottie-from-airbnb-bbc039c87e63
+
+
+
