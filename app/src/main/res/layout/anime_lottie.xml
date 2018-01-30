@@ -29,14 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:id="@+id/btnPrev"
+            android:id="@+id/btnPrevLottie"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Prev Anime" />
         <Button
-            android:id="@+id/btnNext"
+            android:id="@+id/btnNextLottie"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

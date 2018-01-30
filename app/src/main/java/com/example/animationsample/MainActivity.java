@@ -10,14 +10,15 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLottie, btnGrav;
-    private long pressedTime;
+    private Button btnLottie, btnGrav, btnSample;
+    private long pressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainmenu);
         //상태 바 없애기
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //스크린 가로 모드
         //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -29,27 +30,33 @@ public class MainActivity extends AppCompatActivity {
     Set, Init Views in Layout
      */
     public void setViewInLayout(){
-        btnLottie = (Button)findViewById(R.id.btnNext);
-        btnGrav = (Button)findViewById(R.id.btnGrav);
+        btnLottie = (Button) findViewById(R.id.btnLottie);
+        btnGrav = (Button) findViewById(R.id.btnGrav);
+        btnSample = (Button) findViewById(R.id.btnSample);
 
-        btnLottie.setOnClickListener(this.onClickListener);
-        btnGrav.setOnClickListener(this.onClickListener);
+        btnLottie.setOnClickListener(this.onClickListenerMenu);
+        btnGrav.setOnClickListener(this.onClickListenerMenu);
+        btnSample.setOnClickListener(this.onClickListenerMenu);
     }
 
     /*
     Define Event OnClickListener
      */
-    View.OnClickListener onClickListener = new View.OnClickListener() {
+    View.OnClickListener onClickListenerMenu = new View.OnClickListener() {
         Intent intent;
         @Override
-        public void onClick(View view) {
-            switch (view.getId()){
+        public void onClick(View v) {
+            switch (v.getId()){
                 case R.id.btnLottie:
                     intent = new Intent(getApplicationContext(), LottieActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.btnGrav:
                     intent = new Intent(getApplicationContext(), GravActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btnSample:
+                    intent = new Intent(getApplicationContext(), SampleActivity.class);
                     startActivity(intent);
                     break;
             }

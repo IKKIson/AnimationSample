@@ -9,7 +9,6 @@ public class GravActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anime_grav);
-
     }
 
     /**

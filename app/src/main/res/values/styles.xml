@@ -33,8 +33,19 @@
 
     <!-- no title bar & full screen -->
     <style name="AppTheme.NoTitleBar.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- no title bar & full screen & landscape screen-->
+    <style name="AppTheme.NoTitleBar.FullScreen.Landscape">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:screenOrientation">landscape</item>
     </style>
 
 </resources>

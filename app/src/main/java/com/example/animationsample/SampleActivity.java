@@ -9,18 +9,19 @@ import android.widget.TextView;
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.animationsample.Util.Animation.Lottie.LottieAssets;
 
-public class LottieActivity extends AppCompatActivity {
+public class SampleActivity extends AppCompatActivity {
 
-    private TextView textLottieName = null;
-    private LottieAnimationView animationView = null;
+    private LottieAnimationView animationView;
     private LottieAssets lottieAssets;
-    private Button btnNextLottie, btnPrevLottie, btnDoLottieTest;
+    private Button btnNextSample, btnPrevSample, btnDoSampleTest;
+    private TextView textLottieName = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.anime_lottie);
+        setContentView(R.layout.anime_sample);
         this.InitLottiView();
+
     }
     // Init & Set Lotti Views in Layout
     public void InitLottiView(){
@@ -31,16 +32,17 @@ public class LottieActivity extends AppCompatActivity {
         animationView = (LottieAnimationView) findViewById(R.id.animation_view);
         animationView.setAnimation(lottieAssets.getlottieJsonName(lottieAssets.currentLottie));
 
-        btnNextLottie = (Button) findViewById(R.id.btnNextLottie);
-        btnPrevLottie = (Button) findViewById(R.id.btnPrevLottie);
-        btnDoLottieTest = (Button) findViewById(R.id.btnDoLottieTest);
+        btnNextSample = (Button) findViewById(R.id.btnNextSample);
+        btnPrevSample = (Button) findViewById(R.id.btnPrevSample);
+        btnDoSampleTest = (Button) findViewById(R.id.btnDoSampleTest);
 
-        btnNextLottie.setOnClickListener(onClickListener);
-        btnPrevLottie.setOnClickListener(onClickListener);
-        btnDoLottieTest.setOnClickListener(onClickListener);
+        btnNextSample.setOnClickListener(onClickListener);
+        btnPrevSample.setOnClickListener(onClickListener);
+        btnDoSampleTest.setOnClickListener(onClickListener);
 
         this.AnimationStart();
     }
+
     public void AnimationPause(){
         animationView.loop(false);
         animationView.pauseAnimation();
@@ -77,17 +79,17 @@ public class LottieActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             switch (view.getId()){
-                case R.id.btnDoLottieTest:
+                case R.id.btnDoSampleTest:
                     if(animationView.isAnimating()) {
                         AnimationPause();
                     } else {
                         AnimationStart();
                     }
                     break;
-                case R.id.btnPrevLottie:
+                case R.id.btnPrevSample:
                     AnimationPrev();
                     break;
-                case R.id.btnNextLottie:
+                case R.id.btnNextSample:
                     AnimationNext();
                     break;
             }
@@ -114,4 +116,5 @@ public class LottieActivity extends AppCompatActivity {
         super.onDestroy();
         finish();
     }
+
 }
