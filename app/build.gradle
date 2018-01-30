@@ -27,7 +27,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     /* Animation Library */
-    //Lotti - Android
-    //https://github.com/airbnb/lottie-android
+    //Lotti
     compile 'com.airbnb.android:lottie:2.5.0-beta3'
+    //Grav
+    //TODO : add Grav's module
 }
