@@ -30,5 +30,5 @@ dependencies {
     //Lotti
     compile 'com.airbnb.android:lottie:2.5.0-beta3'
     //Grav
-    //TODO : add Grav's module
+    compile 'com.github.glomadrian:Grav:1.1'
 }

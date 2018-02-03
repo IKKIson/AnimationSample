@@ -23,6 +23,9 @@ public class LottieAssets {
                 , "lottie/loader.json"
                 , "lottie/scanning_animation.json"
                 , "lottie/zeta_diwali.json"
+                , "lottie/bubble.json"
+                , "lottie/confetti.json"
+                , "lottie/setting.json"
         };
     }
 
