@@ -25,4 +25,19 @@
         android:layout_gravity="center_horizontal"
         android:text="View Sample!" />
 
+    <Button
+        android:id="@+id/btnLottieAsync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Do Lottie Async!" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Do!" />
+
+
 </LinearLayout>

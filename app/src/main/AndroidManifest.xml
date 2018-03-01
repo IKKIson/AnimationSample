@@ -20,6 +20,7 @@
         <activity android:name=".LottieActivity" android:screenOrientation="landscape"/>
         <activity android:name=".GravActivity" android:screenOrientation="landscape"/>
         <activity android:name=".SampleActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".LottieAsyncActivity" android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

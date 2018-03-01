@@ -41,18 +41,27 @@ public class LottieActivity extends AppCompatActivity {
 
         this.AnimationStart();
     }
+
+    /*
+     * Animation Contoller
+     */
+    public void AnimationCancel(){
+        animationView.loop(false);
+        animationView.cancelAnimation();
+    }
     public void AnimationPause(){
         animationView.loop(false);
         animationView.pauseAnimation();
     }
     public void AnimationStart(){
+        animationView.postInvalidate();
         textLottieName.setText(lottieAssets.getlottieJsonName(lottieAssets.currentLottie));
         animationView.setAnimation(lottieAssets.getlottieJsonName(lottieAssets.currentLottie));
-        animationView.loop(true);
         animationView.playAnimation();
+        animationView.loop(true);
     }
     public void AnimationPrev(){
-        this.AnimationPause();
+        this.AnimationCancel();
         if(lottieAssets.currentLottie == 0) {
             lottieAssets.currentLottie = lottieAssets.getLottieCount() - 1;
         } else {
@@ -61,13 +70,18 @@ public class LottieActivity extends AppCompatActivity {
         this.AnimationStart();
     }
     public void AnimationNext(){
-        this.AnimationPause();
+        this.AnimationCancel();
         if(lottieAssets.currentLottie + 1 == lottieAssets.getLottieCount()) {
             lottieAssets.currentLottie = 0;
         } else {
             ++lottieAssets.currentLottie;
         }
         this.AnimationStart();
+    }
+    public void AnimationClear(){
+        animationView.loop(false);
+        animationView.cancelAnimation();
+        animationView.clearAnimation();
     }
 
     /*
@@ -101,6 +115,7 @@ public class LottieActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        this.AnimationClear();
         finish();
     }
 
@@ -112,6 +127,7 @@ public class LottieActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        this.AnimationClear();
         finish();
     }
 }

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnLottie, btnGrav, btnSample;
+    private Button btnLottie, btnGrav, btnSample, btnLottieAsync;
     private long pressedTime = 0;
 
     @Override
@@ -33,14 +33,17 @@ public class MainActivity extends AppCompatActivity {
         btnLottie = (Button) findViewById(R.id.btnLottie);
         btnGrav = (Button) findViewById(R.id.btnGrav);
         btnSample = (Button) findViewById(R.id.btnSample);
+        btnLottieAsync = (Button) findViewById(R.id.btnLottieAsync);
 
         btnLottie.setOnClickListener(this.onClickListenerMenu);
         btnGrav.setOnClickListener(this.onClickListenerMenu);
         btnSample.setOnClickListener(this.onClickListenerMenu);
+        btnLottieAsync.setOnClickListener(this.onClickListenerMenu);
     }
 
     /*
     Define Event OnClickListener
+
      */
     View.OnClickListener onClickListenerMenu = new View.OnClickListener() {
         Intent intent;
@@ -57,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btnSample:
                     intent = new Intent(getApplicationContext(), SampleActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btnLottieAsync:
+                    intent = new Intent(getApplicationContext(), LottieAsyncActivity.class);
                     startActivity(intent);
                     break;
             }
